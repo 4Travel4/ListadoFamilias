@@ -25,18 +25,11 @@ header h1 {
 }
 
 .info {
-    background-color: #e6f0ff;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.info h2 {
-    color: #004080;
-    font-size: 20px;
-    margin-bottom: 20px;
-    text-align: center;
+    padding: 0; /* Elimina los márgenes internos del contenedor */
+    margin: 0; /* Elimina los márgenes externos del contenedor */
+    background-color: transparent; /* Elimina el fondo azul */
+    border: none; /* Elimina cualquier borde que pudiera tener */
+    box-shadow: none; /* Elimina el efecto de sombra */
 }
 
 .info-table {
