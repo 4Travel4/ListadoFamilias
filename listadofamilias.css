@@ -109,13 +109,4 @@ table tr:hover {
     background-color: #d9e6f2;
 }
 
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #004080;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+
