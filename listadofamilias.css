@@ -47,18 +47,11 @@ header h1 {
 .info-table td {
     padding: 8px;
     vertical-align: top;
+    width: 50%;  /* Cada columna ocupa el 50% del espacio */
 }
 
-.info-table td:first-child {
-    width: 30%;  /* Hace que la descripción ocupe el 30% del ancho */
-}
-
-.info-table td:last-child {
-    width: 70%;  /* Hace que el valor ocupe el 70% del ancho */
-}
-
-.info-table strong {
-    display: inline; /* Asegura que el texto esté en la misma línea */
+.info-table td strong {
+    display: inline; /* Mantener la descripción y el valor en la misma línea */
 }
 
 
