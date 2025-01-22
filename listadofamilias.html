@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Familias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="logo-placeholder.png" alt="Logo de la Empresa">
+    <h1>Listado de Familias</h1>
+</header>
+
+<section class="info">
+    <h2>Información General</h2>
+    <p><strong>Referencia T4L:</strong> <<[EXPEDIENTE].[Referencia Travel4]>></p>
+    <p><strong>Cliente:</strong> <<[CLIENTE].[CLIENTE]>></p>
+    <p><strong>RDV:</strong> <<[RDV].[NOMBRE]>></p>
+    <p><strong>Referencia Cliente:</strong> <<[REFERENCIA CLIENTE]>></p>
+    <p><strong>Responsable:</strong> <<[RESPONSABLE]>></p>
+    <p><strong>Responsable Local 1:</strong> <<[RESP.LOCAL 1].[NOMBRE]>></p>
+    <p><strong>Responsable Local 2:</strong> <<[RESP.LOCAL 2].[NOMBRE]>></p>
+</section>
+
+<section>
+    <h2>Detalles de Familias</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Parada</th>
+                <th>Familia</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Pet</th>
+                <th>Chicas</th>
+                <th>Chicos</th>
+                <th>Prof(as)</th>
+                <th>Prof(os)</th>
+                <th>Chofer</th>
+                <th>Alumno 1</th>
+                <th>Alumno 2</th>
+                <th>Alumno 3</th>
+                <th>Alumno 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <<Start: ORDERBY([Related DETALLE_FAMILIASs], [PARADA].[NOMBRE])>>
+            <tr>
+                <td><<[PARADA].[NOMBRE]>></td>
+                <td><<[FAMILIA].[NOMBRE COMPLETO]>></td>
+                <td><<[FAMILIA].[DIRECCION]>></td>
+                <td><<[FAMILIA].[TELEFONO 1]>></td>
+                <td><<[FAMILIA].[PET]>></td>
+                <td><<[Nº ALUMNAS]>></td>
+                <td><<[Nº ALUMNOS]>></td>
+                <td><<[Nº PROFESORAS]>></td>
+                <td><<[Nº PROFESORES]>></td>
+                <td><<[CHOFER]>></td>
+                <td><<[ALUMNO 1]>></td>
+                <td><<[ALUMNO 2]>></td>
+                <td><<[ALUMNO 3]>></td>
+                <td><<[ALUMNO 4]>></td>
+            </tr>
+            <<End>>
+        </tbody>
+    </table>
+</section>
+
+<div class="footer">
+    <p>Generado automáticamente por la aplicación.</p>
+</div>
+
+</body>
+</html>
