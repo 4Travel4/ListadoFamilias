@@ -30,12 +30,17 @@ header h1 {
     margin: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: grid; /* Cambiado para usar Grid */
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 10px 20px; /* Espacio entre filas y columnas */
 }
 
 .info h2 {
     color: #004080;
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    grid-column: span 2; /* Hacer que el título ocupe las dos columnas */
+    text-align: center; /* Centrado del título */
 }
 
 .info p {
@@ -47,6 +52,7 @@ section h2 {
     color: #004080;
     margin: 20px 0;
 }
+
 
 /* Tabla */
 table {
