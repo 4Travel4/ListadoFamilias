@@ -36,22 +36,23 @@ header h1 {
     color: #004080;
     font-size: 20px;
     margin-bottom: 20px;
-    text-align: left;
+    text-align: center;
 }
 
-.info-table {
-    width: 100%;
-    border-collapse: collapse;
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Dos columnas */
+    gap: 10px;
+    align-items: baseline;  /* Alineación en la parte superior */
 }
 
-.info-table td {
-    padding: 8px;
-    vertical-align: top;
-    width: 50%;  /* Cada columna ocupa el 50% del espacio */
+.info-grid div {
+    display: flex;
+    align-items: baseline;  /* Alinea el texto del título con el valor */
 }
 
-.info-table td strong {
-    display: inline; /* Mantener la descripción y el valor en la misma línea */
+.info-grid strong {
+    margin-right: 10px;  /* Espacio entre la descripción y el valor */
 }
 
 
