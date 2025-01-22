@@ -39,6 +39,23 @@ header h1 {
     text-align: center;
 }
 
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Dos columnas */
+    gap: 10px;
+    align-items: baseline;  /* Alineación en la parte superior */
+}
+
+.info-grid div {
+    display: flex;
+    align-items: baseline;  /* Alinea el texto del título con el valor */
+}
+
+.info-grid strong {
+    margin-right: 10px;  /* Espacio entre la descripción y el valor */
+}
+
+
 table {
     width: 100%;
     border-collapse: collapse;
