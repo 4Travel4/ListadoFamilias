@@ -76,12 +76,8 @@ table td:first-child {
 }
 
 
-
-/* Tabla */
+/* Tabla de Familias */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0 auto 20px auto;
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -107,4 +103,11 @@ table tr:nth-child(even) {
 
 table tr:hover {
     background-color: #d9e6f2;
+}
+
+/* Ajuste específico para la columna de firma */
+table td:last-child {
+    width: 200px; /* Aumentamos el tamaño de la columna de la firma */
+    min-width: 150px; /* Aseguramos un tamaño mínimo */
+    text-align: left; /* Alineamos a la izquierda para que sea más fácil escribir */
 }
