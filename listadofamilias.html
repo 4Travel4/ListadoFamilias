@@ -4,28 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado de Familias</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://4travel4.github.io/ListadoFamilias/listadofamilias.css">
 </head>
 <body>
-
-<header>
-    <img src="logo-placeholder.png" alt="Logo de la Empresa">
-    <h1>Listado de Familias</h1>
-</header>
-
 <section class="info">
-    <h2>Información General</h2>
-    <p><strong>Referencia T4L:</strong> <<[EXPEDIENTE].[Referencia Travel4]>></p>
-    <p><strong>Cliente:</strong> <<[CLIENTE].[CLIENTE]>></p>
-    <p><strong>RDV:</strong> <<[RDV].[NOMBRE]>></p>
-    <p><strong>Referencia Cliente:</strong> <<[REFERENCIA CLIENTE]>></p>
-    <p><strong>Responsable:</strong> <<[RESPONSABLE]>></p>
-    <p><strong>Responsable Local 1:</strong> <<[RESP.LOCAL 1].[NOMBRE]>></p>
-    <p><strong>Responsable Local 2:</strong> <<[RESP.LOCAL 2].[NOMBRE]>></p>
+    <table class="info-table">
+        <tr>
+            <td><strong>Cliente:</strong>&lt;&lt;[CLIENTE].[CLIENTE]&gt;&gt;</td>
+            <td><strong>RDV:</strong>&lt;&lt;[RDV].[NOMBRE]&gt;&gt;</td>
+        </tr>
+        <tr>
+            <td><strong>Referencia Cliente:</strong>&lt;&lt;[REFERENCIA CLIENTE]&gt;&gt;</td>
+            <td><strong>Responsable Local 1:</strong>&lt;&lt;[RESP.LOCAL 1].[NOMBRE]&gt;&gt;</td>
+        </tr>
+        <tr>
+            <td><strong>Grupo:</strong>&lt;&lt;[RESPONSABLE]&gt;&gt;</td>
+            <td><strong>Responsable Local 2:</strong>&lt;&lt;[RESP.LOCAL 2].[NOMBRE]&gt;&gt;</td>
+        </tr>
+        <tr>
+            <td><strong>Referencia T4L:</strong>&lt;&lt;[EXPEDIENTE].[Referencia Travel4]&gt;&gt;</td>
+            <td></td> <!-- Celda vacía para que la tabla esté balanceada -->
+        </tr>
+    </table>
+</section>
+
+
+<section>
+    <table>
+        <thead>
+            <tr>
+                <th>Parada</th>
+                <th>Familia</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Prof(as)</th>
+                <th>Prof(os)</th>
+                <th>Chofer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <p>
+                <span>
+                    &lt;&lt;Start: ORDERBY(
+                        SELECT(
+                            DETALLE_FAMILIAS[ID_DETALLE], 
+                            AND(
+                                [NUMERO_EXPEDIENTE].[EXPEDIENTE] = [_THISROW].[EXPEDIENTE],
+                                OR(
+                                    [Nº PROFESORAS] > 0, 
+                                    [Nº PROFESORES] > 0, 
+                                    ISNOTBLANK([CHOFER])
+                                )
+                            )
+                        ), 
+                        [PARADA].[NOMBRE]
+                    )&gt;&gt;
+                </span>
+            </p>
+            <tr>
+                <td><span>&lt;&lt;[PARADA].[NOMBRE]&gt;&gt;</span></td>
+                <td><span>&lt;&lt;[FAMILIA].[NOMBRE COMPLETO]&gt;&gt;</span></td>
+                <td><span>&lt;&lt;[FAMILIA].[DIRECCION]&gt;&gt;</span></td>
+                <td><span>&lt;&lt;[FAMILIA].[TELEFONO 1]&gt;&gt;</span></td>
+                <td><span>&lt;&lt;[Nº PROFESORAS]&gt;&gt;</span></td>
+                <td><span>&lt;&lt;[Nº PROFESORES]&gt;&gt;</span></td>
+                <td><span>&lt;&lt;[CHOFER]&gt;&gt;</span></td>
+            </tr>
+            <p><span>&lt;&lt;End&gt;&gt;</span></p>
+        </tbody>
+    </table>
 </section>
 
 <section>
-    <h2>Detalles de Familias</h2>
     <table>
         <thead>
             <tr>
@@ -36,41 +86,55 @@
                 <th>Pet</th>
                 <th>Chicas</th>
                 <th>Chicos</th>
-                <th>Prof(as)</th>
-                <th>Prof(os)</th>
-                <th>Chofer</th>
-                <th>Alumno 1</th>
-                <th>Alumno 2</th>
-                <th>Alumno 3</th>
-                <th>Alumno 4</th>
+                <th>Al1</th>
+                <th>Al2</th>
+                <th>Al3</th>
+                <th>Al4</th>
             </tr>
         </thead>
         <tbody>
-            <<Start: ORDERBY([Related DETALLE_FAMILIASs], [PARADA].[NOMBRE])>>
+            <p>
+                <span>
+                    &lt;&lt;Start: ORDERBY(
+                        SELECT(
+                            DETALLE_FAMILIAS[ID_DETALLE], 
+                            AND(
+                                [NUMERO_EXPEDIENTE].[EXPEDIENTE] = [_THISROW].[EXPEDIENTE],
+                                NOT(
+                                    OR(
+                                        [Nº PROFESORAS] > 0,
+                                        [Nº PROFESORES] > 0,
+                                        ISNOTBLANK([CHOFER])
+                                    )
+                                )
+                            )
+                        ), 
+                        [PARADA].[NOMBRE]
+                    )&gt;&gt;
+                </span>
+            </p>
             <tr>
-                <td><<[PARADA].[NOMBRE]>></td>
-                <td><<[FAMILIA].[NOMBRE COMPLETO]>></td>
-                <td><<[FAMILIA].[DIRECCION]>></td>
-                <td><<[FAMILIA].[TELEFONO 1]>></td>
-                <td><<[FAMILIA].[PET]>></td>
-                <td><<[Nº ALUMNAS]>></td>
-                <td><<[Nº ALUMNOS]>></td>
-                <td><<[Nº PROFESORAS]>></td>
-                <td><<[Nº PROFESORES]>></td>
-                <td><<[CHOFER]>></td>
-                <td><<[ALUMNO 1]>></td>
-                <td><<[ALUMNO 2]>></td>
-                <td><<[ALUMNO 3]>></td>
-                <td><<[ALUMNO 4]>></td>
+                <td><span>&lt;&lt;[PARADA].[NOMBRE]&gt;&gt;</span></td>
+                <td><span>&lt;&lt;[FAMILIA].[NOMBRE COMPLETO]&gt;&gt;</span></td>
+                <td><span>&lt;&lt;[FAMILIA].[DIRECCION]&gt;&gt;</span></td>
+                <td><span>&lt;&lt;[FAMILIA].[TELEFONO 1]&gt;&gt;</span></td>
+                <td><span>&lt;&lt;[FAMILIA].[PET]&gt;&gt;</span></td>
+                <td><span>&lt;&lt;[Nº ALUMNAS]&gt;&gt;</span></td>
+                <td><span>&lt;&lt;[Nº ALUMNOS]&gt;&gt;</span></td>
+                <td><span>&lt;&lt;[ALUMNO 1]&gt;&gt;</span></td>
+                <td><span>&lt;&lt;[ALUMNO 2]&gt;&gt;</span></td>
+                <td><span>&lt;&lt;[ALUMNO 3]&gt;&gt;</span></td>
+                <td><span>&lt;&lt;[ALUMNO 4]&gt;&gt;</span></td>
             </tr>
-            <<End>>
+            <p><span>&lt;&lt;End&gt;&gt;</span></p>
         </tbody>
     </table>
 </section>
 
-<div class="footer">
-    <p>Generado automáticamente por la aplicación.</p>
-</div>
+
+
+
 
 </body>
 </html>
+
