@@ -1,4 +1,5 @@
-/* Estilos generales */
+</body>
+</html> y mi css: /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -25,41 +26,37 @@ header h1 {
 }
 
 .info {
-    padding: 0;
-    margin: 0;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-    text-align: center; /* Alineación centrada para la tabla */
+    padding: 0; /* Elimina los márgenes internos del contenedor */
+    margin: 0; /* Elimina los márgenes externos del contenedor */
+    background-color: transparent; /* Elimina el fondo azul */
+    border: none; /* Elimina cualquier borde que pudiera tener */
+    box-shadow: none; /* Elimina el efecto de sombra */
 }
 
 .info-table {
-    width: 80%; /* Ancho del 80% para centrar la tabla */
-    margin: 0 auto; /* Centra la tabla horizontalmente */
-    border-collapse: separate; /* Evita que las columnas se junten */
-    border-spacing: 15px; /* Espacio entre columnas */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    border-collapse: collapse; /* Combina los bordes de las celdas */
 }
 
 .info-table td {
-    padding: 8px 10px;
-    text-align: left;
-    vertical-align: top;
-    font-size: 14px;
+    padding: 8px 10px; /* Espaciado interno para las celdas */
+    text-align: left; /* Justificar el texto a la izquierda */
+    vertical-align: top; /* Alinear el texto en la parte superior de la celda */
+    font-size: 14px; /* Ajustar el tamaño de la fuente */
 }
 
 .info-table strong {
-    margin-right: 5px;
-    font-weight: bold;
+    margin-right: 5px; /* Espacio entre el título y el contenido */
+    font-weight: bold; /* Asegura que el título sea más prominente */
 }
 
 .info-table tr:nth-child(odd) {
-    background-color: #f7fbff;
+    background-color: #f7fbff; /* Color de fondo alternado para filas impares */
 }
 
 .info-table tr:nth-child(even) {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Color de fondo alternado para filas pares */
 }
-
 table {
     width: 100%;
     border-collapse: collapse;
