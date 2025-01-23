@@ -57,12 +57,12 @@ header h1 {
     background-color: #ffffff; /* Color de fondo alternado para filas pares */
 }
 
-
-
+/* Estilos para las tablas */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    table-layout: auto; /* Ajustar el tamaño de las celdas al contenido */
 }
 
 table td {
@@ -75,19 +75,13 @@ table td:first-child {
     font-weight: bold;
 }
 
-
-
-/* Tabla */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0 auto 20px auto;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
+/* Añadir más espacio a la columna de Firma */
+table td:last-child {
+    width: 150px; /* Puedes ajustar este valor según lo que necesites */
+    padding: 20px; /* Aumentar el espacio */
 }
 
+/* Estilo de las cabeceras */
 table th, table td {
     border: 1px solid #d9e6f2;
     padding: 10px;
