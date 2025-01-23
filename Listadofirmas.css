@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    margin: 20px; /* Agregado margen general a la página */
+    margin: 0;
     padding: 0;
     background-color: #f4f8fb;
     color: #333;
@@ -25,81 +25,45 @@ header h1 {
 }
 
 .info {
-    padding: 0; 
-    margin: 0; 
-    background-color: transparent; 
-    border: none; 
-    box-shadow: none; 
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    text-align: center; /* Alineación centrada para la tabla */
 }
 
 .info-table {
-    width: 100%;
-    border-collapse: collapse; 
+    width: 80%; /* Ancho del 80% para centrar la tabla */
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+    border-collapse: separate; /* Evita que las columnas se junten */
+    border-spacing: 15px; /* Espacio entre columnas */
 }
 
 .info-table td {
-    padding: 8px 10px; 
-    text-align: left; 
-    vertical-align: top; 
-    font-size: 14px; 
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 14px;
 }
 
 .info-table strong {
-    margin-right: 5px; 
-    font-weight: bold; 
-}
-
-.info-table tr:nth-child(odd) {
-    background-color: #f7fbff; 
-}
-
-.info-table tr:nth-child(even) {
-    background-color: #ffffff; 
-}
-
-/* Estilo para las tablas de Familias */
-table.familias {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-table.familias th, table.familias td {
-    border: 1px solid #d9e6f2;
-    padding: 10px;
-    text-align: center;
-    font-size: 11px;
-}
-
-table.familias th {
-    background-color: #004080;
-    color: #fff;
+    margin-right: 5px;
     font-weight: bold;
 }
 
-table.familias tr:nth-child(even) {
-    background-color: #f2f6fc;
+.info-table tr:nth-child(odd) {
+    background-color: #f7fbff;
 }
 
-table.familias tr:hover {
-    background-color: #d9e6f2;
+.info-table tr:nth-child(even) {
+    background-color: #ffffff;
 }
 
-/* Ajuste específico para la columna de firma */
-table.familias td:last-child {
-    width: 200px; /* Aumentamos el tamaño de la columna de la firma */
-    min-width: 150px;
-    text-align: left;
-}
-
-/* Tabla info (no cambiar el ancho) */
-table.info-table {
-    width: auto; /* Evitar que la tabla de info ocupe todo el ancho */
-    margin-bottom: 10px; /* Añadir espacio por debajo de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
 }
 
 table td {
@@ -112,7 +76,38 @@ table td:first-child {
     font-weight: bold;
 }
 
-/* Márgenes generales */
-body {
-    margin: 20px; /* Añadir margen a la página */
+/* Tabla de Familias */
+table {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    border: 1px solid #d9e6f2;
+    padding: 10px;
+    text-align: center;
+    font-size: 11px;
+}
+
+table th {
+    background-color: #004080;
+    color: #fff;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f6fc;
+}
+
+table tr:hover {
+    background-color: #d9e6f2;
+}
+
+/* Ajuste específico para la columna de firma */
+table td:last-child {
+    width: 200px;
+    min-width: 150px;
+    text-align: left;
 }
