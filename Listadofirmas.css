@@ -42,7 +42,7 @@ header h1 {
     padding: 8px 10px; /* Espaciado interno para las celdas */
     text-align: left; /* Justificar el texto a la izquierda */
     vertical-align: top; /* Alinear el texto en la parte superior de la celda */
-    font-size: 14px; /* Ajustar el tamaño de la fuente */
+    font-size: 12px; /* Ajustar el tamaño de la fuente */
 }
 
 .info-table strong {
