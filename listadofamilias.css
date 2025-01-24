@@ -95,6 +95,17 @@ table th, table td {
     font-size: 11px;
 }
 
+/* Ajustar las columnas a su contenido */
+table td, table th {
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    word-wrap: break-word; /* Permite que las palabras largas se dividan si es necesario */
+}
+
+/* Ajustar específicamente la columna de teléfono */
+table td:nth-child(4), table th:nth-child(4) {
+    width: 120px; /* Ajusta el ancho de la columna de teléfono si es necesario */
+}
+
 table th {
     background-color: #004080;
     color: #fff;
