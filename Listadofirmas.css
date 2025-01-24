@@ -73,6 +73,25 @@ table td:first-child {
     font-weight: bold;
 }
 
+/* Tabla general */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+/* Estilo para todas las celdas */
+table td {
+    padding: 8px;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Negrita para la primera columna */
+table td:first-child {
+    font-weight: bold;
+}
+
 /* Tabla de Familias */
 table {
     background-color: #ffffff;
@@ -88,18 +107,32 @@ table th, table td {
     font-size: 11px;
 }
 
+/* Encabezados */
 table th {
     background-color: #004080;
     color: #fff;
     font-weight: bold;
 }
 
+/* Filas alternas */
 table tr:nth-child(even) {
     background-color: #f2f6fc;
 }
 
+/* Efecto hover */
 table tr:hover {
     background-color: #d9e6f2;
+}
+
+/* Ajustes específicos para el contenido de las celdas */
+table td, table th {
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    word-wrap: break-word; /* Permite que las palabras largas se dividan si es necesario */
+}
+
+/* Ajuste específico para la columna de teléfono */
+table td:nth-child(4), table th:nth-child(4) {
+    width: 120px; /* Ajusta el ancho de la columna de teléfono si es necesario */
 }
 
 /* Ajuste específico para la columna de firma */
