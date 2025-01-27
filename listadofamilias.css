@@ -74,7 +74,7 @@ table th, table td {
     border: 1px solid #d9e6f2;
     padding: 8px; /* Reducido el padding para aprovechar mejor el espacio */
     text-align: left;
-    font-size: 9px; /* Tamaño de fuente reducido para todas las celdas */
+    font-size: 10px; /* Tamaño de fuente reducido para todas las celdas */
     vertical-align: middle; /* Alineación vertical */
     word-wrap: break-word; /* Permite que las palabras largas se ajusten */
 }
