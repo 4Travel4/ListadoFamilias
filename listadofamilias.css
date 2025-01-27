@@ -59,7 +59,7 @@ header h1 {
 
 
 
-/* Ajustar las columnas a su contenido */
+/* Estilo para la tabla */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -68,46 +68,48 @@ table {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
-    table-layout: auto; /* Permite que las celdas se ajusten al contenido */
+    table-layout: auto;
 }
 
-table th, table td {
-    border: 1px solid #d9e6f2;
-    padding: 10px;
-    text-align: left;
-    font-size: 11px;
-    white-space: nowrap; /* Evita saltos de línea en contenido */
-    word-wrap: break-word; /* Divide palabras largas si es necesario */
-}
-
-/* Ajustar específicamente las columnas Al1, Al2, Al3 y Al4 */
-table td:nth-child(8),
-table th:nth-child(8),
-table td:nth-child(9),
-table th:nth-child(9),
-table td:nth-child(10),
-table th:nth-child(10),
-table td:nth-child(11),
-table th:nth-child(11) {
-    width: 180px; /* Espacio suficiente para nombres y apellidos */
-    text-align: left;
-    min-height: 60px; /* Altura mínima aumentada */
-    padding: 20px 10px; /* Más espacio interno */
-    vertical-align: middle; /* Centra verticalmente el contenido */
-}
-
-/* Ajustar específicamente la columna de Teléfono */
-table td:nth-child(4), table th:nth-child(4) {
-    width: 120px;
-}
-
-/* Encabezados */
+/* Encabezados con ancho fijo */
 table th {
     background-color: #004080;
     color: #fff;
     font-weight: bold;
     text-align: left;
-    height: 60px; /* Altura para los encabezados */
+    height: 50px;
+    white-space: nowrap; /* Evita que se ajusten automáticamente al contenido */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Ajuste de las celdas */
+table td {
+    border: 1px solid #d9e6f2;
+    padding: 10px;
+    text-align: left;
+    font-size: 11px;
+    white-space: nowrap; /* Evita saltos de línea */
+    word-wrap: break-word; /* Divide palabras largas si es necesario */
+}
+
+/* Ajustar específicamente las columnas Al1, Al2, Al3 y Al4 */
+table td:nth-child(8),
+table td:nth-child(9),
+table td:nth-child(10),
+table td:nth-child(11) {
+    width: 220px; /* Ancho mayor para los placeholders */
+    text-align: left;
+    padding: 15px; /* Espaciado interno */
+    vertical-align: middle;
+}
+
+/* Estilo para los placeholders dentro de las celdas */
+table td span {
+    display: inline-block;
+    width: 100%; /* Ocupar todo el espacio de la celda */
+    font-size: 13px; /* Tamaño del texto del placeholder */
+    color: #555; /* Color suave para los placeholders */
+    min-height: 40px; /* Altura mínima dentro del span */
 }
 
 /* Colores alternados */
