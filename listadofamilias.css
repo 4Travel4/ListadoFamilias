@@ -59,25 +59,7 @@ header h1 {
 
 
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-table td {
-    padding: 8px;
-    vertical-align: top;
-    border-bottom: 1px solid #ddd;
-}
-
-table td:first-child {
-    font-weight: bold;
-}
-
-
-
-/* Tabla */
+/* Tabla general */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -93,25 +75,39 @@ table th, table td {
     padding: 10px;
     text-align: left;
     font-size: 11px;
+    vertical-align: middle; /* Alineación vertical */
 }
 
-/* Ajustar las columnas a su contenido */
-table td, table th {
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-    word-wrap: break-word; /* Permite que las palabras largas se dividan si es necesario */
+/* Espaciado y ajuste de las celdas de alumnos */
+table td:nth-child(8),
+table td:nth-child(9),
+table td:nth-child(10),
+table td:nth-child(11) {
+    width: 250px; /* Aumenta el ancho para acomodar texto largo */
+    height: 50px; /* Aumenta la altura mínima de las celdas */
+    white-space: normal; /* Permite que el texto ocupe varias líneas si es necesario */
+    word-wrap: break-word; /* Divide palabras largas si es necesario */
+    text-align: left; /* Alineación izquierda del texto */
 }
 
-/* Ajustar específicamente la columna de teléfono */
-table td:nth-child(4), table th:nth-child(4) {
-    width: 120px; /* Ajusta el ancho de la columna de teléfono si es necesario */
+/* Placeholder dentro de las celdas */
+table td span {
+    display: inline-block;
+    font-size: 12px; /* Tamaño del texto del placeholder */
+    line-height: 1.4; /* Espaciado entre líneas */
+    color: #333; /* Color del texto */
 }
 
+/* Encabezados */
 table th {
     background-color: #004080;
     color: #fff;
     font-weight: bold;
+    white-space: nowrap; /* Mantén los encabezados en una sola línea */
+    padding: 10px;
 }
 
+/* Colores alternados */
 table tr:nth-child(even) {
     background-color: #f2f6fc;
 }
@@ -119,3 +115,10 @@ table tr:nth-child(even) {
 table tr:hover {
     background-color: #d9e6f2;
 }
+
+/* Otras celdas mantienen el comportamiento general */
+table td {
+    white-space: nowrap; /* Texto en una sola línea para las celdas normales */
+    word-wrap: break-word;
+}
+
