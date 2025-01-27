@@ -107,7 +107,7 @@ table td span {
 
 /* Placeholder dentro de las celdas generales */
 table td span {
-    font-size: 8px; /* Tamaño más pequeño para el texto en general */
+    font-size: 10px; /* Tamaño más pequeño para el texto en general */
     line-height: 1.4; /* Espaciado entre líneas */
     color: #333; /* Color del texto */
 }
