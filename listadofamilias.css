@@ -72,19 +72,20 @@ table {
 
 table th, table td {
     border: 1px solid #d9e6f2;
-    padding: 10px;
+    padding: 8px; /* Reducido el padding para aprovechar mejor el espacio */
     text-align: left;
-    font-size: 11px;
+    font-size: 9px; /* Tamaño de fuente reducido para todas las celdas */
     vertical-align: middle; /* Alineación vertical */
+    word-wrap: break-word; /* Permite que las palabras largas se ajusten */
 }
 
-/* Ajustar las celdas de alumnos para que tengan un ancho y alto más grande */
+/* Ajustar las celdas de alumnos para que tengan un ancho mucho más grande */
 table td:nth-child(8),
 table td:nth-child(9),
 table td:nth-child(10),
 table td:nth-child(11) {
-    width: 350px; /* Aumenta el ancho para acomodar más texto */
-    height: 80px; /* Aumenta la altura de las celdas */
+    width: 500px; /* Ancho aumentado para las celdas de los alumnos */
+    height: 80px; /* Altura ya ajustada */
     white-space: normal; /* Permite que el texto ocupe varias líneas si es necesario */
     word-wrap: break-word; /* Divide palabras largas si es necesario */
     text-align: left; /* Alineación izquierda del texto */
@@ -92,14 +93,21 @@ table td:nth-child(11) {
 
 /* Ajuste para que las otras celdas se ajusten al contenido */
 table td:not(:nth-child(8)):not(:nth-child(9)):not(:nth-child(10)):not(:nth-child(11)) {
-    white-space: nowrap; /* No permite que el texto se divida en varias líneas */
+    white-space: nowrap; /* Evita el salto de línea */
     word-wrap: normal; /* No permite que las palabras se dividan */
 }
 
-/* Placeholder dentro de las celdas */
+/* Placeholder dentro de las celdas de alumnos */
 table td span {
     display: inline-block;
-    font-size: 12px; /* Tamaño del texto del placeholder */
+    font-size: 8px; /* Tamaño más pequeño para el texto dentro de las celdas de alumnos */
+    line-height: 1.4; /* Espaciado entre líneas */
+    color: #333; /* Color del texto */
+}
+
+/* Placeholder dentro de las celdas generales */
+table td span {
+    font-size: 8px; /* Tamaño más pequeño para el texto en general */
     line-height: 1.4; /* Espaciado entre líneas */
     color: #333; /* Color del texto */
 }
