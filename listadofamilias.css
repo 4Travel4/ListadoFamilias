@@ -91,6 +91,9 @@ table td:nth-child(11),
 table th:nth-child(11) {
     width: 180px; /* Espacio suficiente para nombres y apellidos */
     text-align: left;
+    min-height: 40px; /* Incrementa la altura mínima */
+    padding: 15px 10px; /* Más espacio interno para facilitar la lectura */
+    vertical-align: middle; /* Centra verticalmente el contenido */
 }
 
 /* Ajustar específicamente la columna de Teléfono */
@@ -104,6 +107,7 @@ table th {
     color: #fff;
     font-weight: bold;
     text-align: left;
+    height: 50px; /* Altura para los encabezados */
 }
 
 /* Colores alternados */
