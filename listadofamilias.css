@@ -78,16 +78,22 @@ table th, table td {
     vertical-align: middle; /* Alineación vertical */
 }
 
-/* Espaciado y ajuste de las celdas de alumnos */
+/* Ajustar las celdas de alumnos para que tengan un ancho y alto fijo */
 table td:nth-child(8),
 table td:nth-child(9),
 table td:nth-child(10),
 table td:nth-child(11) {
-    width: 250px; /* Aumenta el ancho para acomodar texto largo */
-    height: 50px; /* Aumenta la altura mínima de las celdas */
+    width: 200px; /* Ancho fijo para las celdas de alumnos */
+    height: 50px; /* Altura mínima para las celdas de alumnos */
     white-space: normal; /* Permite que el texto ocupe varias líneas si es necesario */
     word-wrap: break-word; /* Divide palabras largas si es necesario */
     text-align: left; /* Alineación izquierda del texto */
+}
+
+/* Ajuste para que las otras celdas se ajusten al contenido */
+table td:not(:nth-child(8)):not(:nth-child(9)):not(:nth-child(10)):not(:nth-child(11)) {
+    white-space: nowrap; /* No permite que el texto se divida en varias líneas */
+    word-wrap: normal; /* No permite que las palabras se dividan */
 }
 
 /* Placeholder dentro de las celdas */
