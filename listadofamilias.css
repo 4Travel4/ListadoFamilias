@@ -59,25 +59,7 @@ header h1 {
 
 
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-table td {
-    padding: 8px;
-    vertical-align: top;
-    border-bottom: 1px solid #ddd;
-}
-
-table td:first-child {
-    font-weight: bold;
-}
-
-
-
-/* Tabla */
+/* Ajustar las columnas a su contenido */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -86,6 +68,7 @@ table {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
+    table-layout: auto; /* Permite que las celdas se ajusten al contenido */
 }
 
 table th, table td {
@@ -93,25 +76,37 @@ table th, table td {
     padding: 10px;
     text-align: left;
     font-size: 11px;
+    white-space: nowrap; /* Evita saltos de línea en contenido */
+    word-wrap: break-word; /* Divide palabras largas si es necesario */
 }
 
-/* Ajustar las columnas a su contenido */
-table td, table th {
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-    word-wrap: break-word; /* Permite que las palabras largas se dividan si es necesario */
+/* Ajustar específicamente las columnas Al1, Al2, Al3 y Al4 */
+table td:nth-child(8),
+table th:nth-child(8),
+table td:nth-child(9),
+table th:nth-child(9),
+table td:nth-child(10),
+table th:nth-child(10),
+table td:nth-child(11),
+table th:nth-child(11) {
+    width: 180px; /* Espacio suficiente para nombres y apellidos */
+    text-align: left;
 }
 
-/* Ajustar específicamente la columna de teléfono */
+/* Ajustar específicamente la columna de Teléfono */
 table td:nth-child(4), table th:nth-child(4) {
-    width: 120px; /* Ajusta el ancho de la columna de teléfono si es necesario */
+    width: 120px;
 }
 
+/* Encabezados */
 table th {
     background-color: #004080;
     color: #fff;
     font-weight: bold;
+    text-align: left;
 }
 
+/* Colores alternados */
 table tr:nth-child(even) {
     background-color: #f2f6fc;
 }
